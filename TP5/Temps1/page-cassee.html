@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon super site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- PROBLÈME : pas de balises sémantiques, tout est en div -->
+  <header class="header">
+    <h1 class="titre">Portfolio</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="content">
+
+      <section class="intro">
+        <h2 class="intro-titre">Bienvenue sur mon portfolio</h2>
+        <p class="intro-description">Étudiante en MMI, passionnée par le web.</p>
+      </section>
+
+      <section class="projets-section" id="projets">
+        <h2 class="section-titre">Mes projets</h2>
+
+        <div class="filtres-container">
+          <span class="filtre actif" onclick="filtrer('tous')">Tous</span>
+          <span class="filtre" onclick="filtrer('HTML')">HTML</span>
+          <span class="filtre" onclick="filtrer('CSS')">CSS</span>
+          <span class="filtre" onclick="filtrer('JS')">JS</span>
+        </div>
+
+        <div class="grille-projets" id="grille">
+          <!-- Rempli par JS -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Modale -->
+  <div class="modale-overlay" id="modale">
+    <div class="modale-contenu">
+      <span class="modale-fermer" onclick="fermerModale()">×</span>
+      <div id="modale-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 — Mon portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

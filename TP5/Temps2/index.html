@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon portfolio - BUT MMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mon portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Mes Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="accueil">
+            <h2>Bienvenue</h2>
+            <p>Étudiant(e) en 1ère année de BUT MMI, je vous présente mes réalisations en développement web et design.
+            </p>
+        </section>
+
+        <section id="projets">
+            <h2>Mes Projets</h2>
+
+            <div id="filtres" aria-label="Filtres des projets">
+                <button class="filtre actif" data-tag="tous">Tous</button>
+                <button class="filtre" data-tag="HTML">HTML</button>
+                <button class="filtre" data-tag="CSS">CSS</button>
+                <button class="filtre" data-tag="JS">JS</button>
+            </div>
+
+            <div id="grille-projets">
+            </div>
+        </section>
+
+        <div id="modale" class="modale-overlay" aria-hidden="true" role="dialog" aria-labelledby="modale-titre">
+            <div class="modale-contenu">
+                <button class="modale-fermer" aria-label="Fermer la modale">×</button>
+                <div id="modale-body">
+                    <h3 id="modale-titre">Titre du projet</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2026 - Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

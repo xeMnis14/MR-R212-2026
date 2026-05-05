@@ -1,0 +1,151 @@
+:root {
+  --bleu-mmi: #3b4cc0;
+  --gris-fond: #f5f5f7;
+  --noir-texte: #1a1a2e;
+  --espacement: 1rem;
+  --arrondi: 8px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--noir-texte);
+  background-color: var(--gris-fond);
+  margin: 0;
+  padding: 15px;
+}
+
+p {
+  max-width: 65ch;
+  margin-bottom: 15px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--bleu-mmi);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  color: black;
+}
+
+#projets h2 {
+  margin-bottom: 15px;
+}
+
+#filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: white;
+  color: var(--bleu-mmi);
+  border: 2px solid var(--bleu-mmi);
+  border-radius: var(--arrondi);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, 
+button:focus {
+  background-color: var(--bleu-mmi);
+  color: white;
+}
+
+button.actif {
+  background-color: var(--bleu-mmi);
+  color: white;
+}
+
+#grille-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--espacement);
+}
+
+.carte-projet {
+  background-color: white;
+  padding: 15px;
+  border-radius: var(--arrondi);
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-projet h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.carte-projet button {
+  margin-top: auto;
+}
+
+.modale-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modale-overlay.modale-ouverte {
+  display: flex;
+}
+
+.modale-contenu {
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--arrondi);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modale-fermer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 30px 50px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
